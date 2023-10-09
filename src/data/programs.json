@@ -1,0 +1,292 @@
+[
+  {
+    "id": 1,
+    "nombre": "Programa de Concienciación Ambiental",
+    "precio_pen": 200,
+    "precio_usd": 50,
+    "fecha_inicio": "2023-02-15",
+    "cursos": [
+      {
+        "id": 101,
+        "nombre": "Reciclaje y Gestión de Residuos",
+        "duracion": "4 semanas"
+      },
+      {
+        "id": 102,
+        "nombre": "Conservación de la Biodiversidad",
+        "duracion": "6 semanas"
+      },
+      {
+        "id": 103,
+        "nombre": "Eficiencia Energética",
+        "duracion": "5 semanas"
+      },
+      {
+        "id": 104,
+        "nombre": "Educación Ambiental",
+        "duracion": "4 semanas"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Certificación en Agricultura Sostenible",
+    "precio_pen": 300,
+    "precio_usd": 75,
+    "fecha_inicio": "2023-03-10",
+    "cursos": [
+      {
+        "id": 201,
+        "nombre": "Métodos de Agricultura Orgánica",
+        "duracion": "8 semanas"
+      },
+      {
+        "id": 202,
+        "nombre": "Gestión del Agua en la Agricultura",
+        "duracion": "7 semanas"
+      },
+      {
+        "id": 203,
+        "nombre": "Prácticas de Agricultura Sostenible",
+        "duracion": "6 semanas"
+      },
+      {
+        "id": 204,
+        "nombre": "Agricultura y Cambio Climático",
+        "duracion": "4 semanas"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Curso Avanzado de Energías Renovables",
+    "precio_pen": 150,
+    "precio_usd": 40,
+    "fecha_inicio": "2023-04-05",
+    "cursos": [
+      {
+        "id": 301,
+        "nombre": "Energía Solar Fotovoltaica",
+        "duracion": "6 semanas"
+      },
+      {
+        "id": 302,
+        "nombre": "Energía Eólica",
+        "duracion": "5 semanas"
+      },
+      {
+        "id": 303,
+        "nombre": "Biogás y Biomasa",
+        "duracion": "4 semanas"
+      },
+      {
+        "id": 304,
+        "nombre": "Diseño de Sistemas de Energías Renovables",
+        "duracion": "6 semanas"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Programa de Gestión Ambiental Empresarial",
+    "precio_pen": 250,
+    "precio_usd": 60,
+    "fecha_inicio": "2023-05-20",
+    "cursos": [
+      {
+        "id": 401,
+        "nombre": "Evaluación de Impacto Ambiental",
+        "duracion": "6 semanas"
+      },
+      {
+        "id": 402,
+        "nombre": "Auditorías Ambientales",
+        "duracion": "7 semanas"
+      },
+      {
+        "id": 403,
+        "nombre": "Responsabilidad Social Empresarial",
+        "duracion": "5 semanas"
+      },
+      {
+        "id": 404,
+        "nombre": "Gestión de Residuos en la Empresa",
+        "duracion": "4 semanas"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Diplomado en Conservación de Ecosistemas",
+    "precio_pen": 350,
+    "precio_usd": 90,
+    "fecha_inicio": "2023-06-15",
+    "cursos": [
+      {
+        "id": 501,
+        "nombre": "Restauración de Ecosistemas",
+        "duracion": "8 semanas"
+      },
+      {
+        "id": 502,
+        "nombre": "Gestión de Reservas Naturales",
+        "duracion": "7 semanas"
+      },
+      {
+        "id": 503,
+        "nombre": "Ecología de Ecosistemas Acuáticos",
+        "duracion": "6 semanas"
+      },
+      {
+        "id": 504,
+        "nombre": "Conservación de Bosques Tropicales",
+        "duracion": "4 semanas"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Curso de Educación Ambiental",
+    "precio_pen": 100,
+    "precio_usd": 30,
+    "fecha_inicio": "2023-07-10",
+    "cursos": [
+      {
+        "id": 601,
+        "nombre": "Comunicación Ambiental",
+        "duracion": "4 semanas"
+      },
+      {
+        "id": 602,
+        "nombre": "Diseño de Programas Educativos",
+        "duracion": "5 semanas"
+      },
+      {
+        "id": 603,
+        "nombre": "Psicología Ambiental",
+        "duracion": "4 semanas"
+      },
+      {
+        "id": 604,
+        "nombre": "Ética Ambiental",
+        "duracion": "6 semanas"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Programa de Conservación Marina",
+    "precio_pen": 280,
+    "precio_usd": 70,
+    "fecha_inicio": "2023-08-20",
+    "cursos": [
+      {
+        "id": 701,
+        "nombre": "Biología Marina",
+        "duracion": "6 semanas"
+      },
+      {
+        "id": 702,
+        "nombre": "Gestión de Reservas Marinas",
+        "duracion": "7 semanas"
+      },
+      {
+        "id": 703,
+        "nombre": "Conservación de Tortugas Marinas",
+        "duracion": "5 semanas"
+      },
+      {
+        "id": 704,
+        "nombre": "Restauración de Ecosistemas Marinos",
+        "duracion": "4 semanas"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Curso de Energía Solar Doméstica",
+    "precio_pen": 120,
+    "precio_usd": 35,
+    "fecha_inicio": "2023-09-10",
+    "cursos": [
+      {
+        "id": 801,
+        "nombre": "Diseño de Sistemas Solares",
+        "duracion": "5 semanas"
+      },
+      {
+        "id": 802,
+        "nombre": "Instalación y Mantenimiento",
+        "duracion": "6 semanas"
+      },
+      {
+        "id": 803,
+        "nombre": "Eficiencia Energética en el Hogar",
+        "duracion": "4 semanas"
+      },
+      {
+        "id": 804,
+        "nombre": "Aplicaciones Prácticas de Energía Solar",
+        "duracion": "7 semanas"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Programa de Gestión de Residuos",
+    "precio_pen": 180,
+    "precio_usd": 45,
+    "fecha_inicio": "2023-10-15",
+    "cursos": [
+      {
+        "id": 901,
+        "nombre": "Reciclaje de Plásticos",
+        "duracion": "5 semanas"
+      },
+      {
+        "id": 902,
+        "nombre": "Gestión de Residuos Peligrosos",
+        "duracion": "6 semanas"
+      },
+      {
+        "id": 903,
+        "nombre": "Compostaje y Vermicompostaje",
+        "duracion": "4 semanas"
+      },
+      {
+        "id": 904,
+        "nombre": "Gestión de Residuos Electrónicos",
+        "duracion": "7 semanas"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Curso de Arboricultura",
+    "precio_pen": 140,
+    "precio_usd": 40,
+    "fecha_inicio": "2023-11-05",
+    "cursos": [
+      {
+        "id": 1001,
+        "nombre": "Podado de Árboles",
+        "duracion": "4 semanas"
+      },
+      {
+        "id": 1002,
+        "nombre": "Cuidado de Árboles Urbanos",
+        "duracion": "5 semanas"
+      },
+      {
+        "id": 1003,
+        "nombre": "Arboricultura Sostenible",
+        "duracion": "6 semanas"
+      },
+      {
+        "id": 1004,
+        "nombre": "Manejo de Plagas en Árboles",
+        "duracion": "4 semanas"
+      }
+    ]
+  }
+]

@@ -30,6 +30,7 @@ useHead({
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Rubik:wght@600&display=swap');
 :root {
   --EVI-DARK-001: #13131a;
   --EVI-DARK-004: #515166;

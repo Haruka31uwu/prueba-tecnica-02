@@ -23,7 +23,6 @@ export default {
       try{
         const response = await getDocentes();
         docentes.value = response.data;
-        console.log(docentes)
       }catch(error){
         console.log(error)
       }
