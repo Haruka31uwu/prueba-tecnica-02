@@ -55,7 +55,7 @@ img {
     align-items: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     margin-top: 2em;
     height: auto;
 }

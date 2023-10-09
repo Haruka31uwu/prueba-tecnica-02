@@ -92,7 +92,8 @@
               v-for="(program, index) in programs"
               :key="`program-${index}`"
               @click="setProgramSelectedHandler(program)"
-            >
+
+            ><hr v-if="program.id!=1"/>
               {{ program.nombre }}
             </li>
           </ul>
