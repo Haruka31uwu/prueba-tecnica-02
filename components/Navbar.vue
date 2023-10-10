@@ -117,7 +117,6 @@ export default {
   setup() {
     let programsOpen = ref(false);
     const theme = getTheme
-
     const programs = computed(() => {
       return getPrograms();
     });

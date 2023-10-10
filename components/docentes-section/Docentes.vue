@@ -15,11 +15,11 @@
 </template>
 <script>
 import { getDocentes } from '@/services/docentes.service.js'
-import{ref,onMounted} from 'vue'
+import{ref} from 'vue'
 export default {
   setup(){
     let docentes = ref([])
-    onMounted(async()=>{
+    onBeforeMount(async()=>{
       try{
         const response = await getDocentes();
         docentes.value = response.data;

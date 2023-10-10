@@ -8,6 +8,7 @@
       <div
         class="indicators-item"
         v-for="(item, index) in indicators"
+        :id="`indicators-item-${index}`"
         :key="`indicators-item-${index}`"
       >
       <div class="indicators-item-container">
@@ -26,7 +27,7 @@
     </div>
   </section>
 </template>
-  <script setup>
+<script setup>
 import { ref } from "vue";
 
 const indicators = ref([

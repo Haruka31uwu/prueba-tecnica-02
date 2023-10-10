@@ -12,7 +12,6 @@ export const mainStore = defineStore('mainStore', {
     actions: {
         changeTheme(t) {
             const rootElement = document.documentElement;
-            rootElement.style.setProperty('--primary', 'blue');
             if (rootElement) {
                 /**
                  *  --EVI-DARK-005: #1c1c24;

@@ -9,7 +9,6 @@
     </div>
 </template>
 <script>
-
 </script>
 <style>
     .section-title {

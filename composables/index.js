@@ -23,4 +23,4 @@ export const changeTheme=(theme)=>{
 }
 export const getTheme = computed(() => {
     return store.theme
-  });
+});

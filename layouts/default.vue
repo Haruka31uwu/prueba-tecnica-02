@@ -1,7 +1,8 @@
 <template>
   <div>
-    <navbar />
-    <router-view />
+    <navbar/>
+    <router-view/>
+    <footer-customized/>
   </div>
 </template>
 <script setup>
@@ -14,9 +15,6 @@ useHead({
         "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC",
       crossorigin: "anonymous",
     },
-    {
-
-    }
   ],
   script: [
     {
