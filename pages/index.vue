@@ -5,6 +5,7 @@
         <courses-indicators/>
         <docentes-section-docentes/>
         <programs-section-programs-container/>
+        <footer-index/>
         </main>
     </div>
 </template>
