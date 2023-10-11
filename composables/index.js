@@ -1,7 +1,6 @@
 import { computed } from 'vue';
 import {mainStore} from '../store/index.store.js'
 const store = mainStore();
-
 export const scrollToSection=(section)  =>{   
     const element=document.getElementById(section)
     if(element){
