@@ -1,0 +1,1 @@
+import{U as e,L as t}from"./entry.94e54efa.js";const a=""+globalThis.__publicAssetsURL("assets/images/whats.svg"),g=s=>{e().setProgramSelected(s)},c=()=>e().getProgramSelected,m=()=>t;export{a as _,m as a,c as g,g as s};
