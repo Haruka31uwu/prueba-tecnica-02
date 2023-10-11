@@ -14,16 +14,16 @@
    
   </section>
 </template>
-<script >
-import programsJson from "/src/data/programs.json";
-import { setProgramSelected,getProgramSelected } from "/composables/programs/programs.composable.js";
-import { ref,computed } from "vue";
+<script>
+import { ref, computed } from 'vue';
+import programsJson from '/src/data/programs.json';
+import { setProgramSelected, getProgramSelected } from '@/composables/programs/programs.composable.js';
+
 export default {
   setup() {
     const programs = ref(programsJson);
-    const programSelected=computed(()=>{
-      return getProgramSelected()
-    }) 
+    const programSelected = computed(getProgramSelected);
+
     return {
       programs,
       programSelected,
@@ -32,6 +32,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 section {

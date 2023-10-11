@@ -46,7 +46,7 @@ article {
   align-items: flex-end;
   justify-content: flex-end;
   margin: 0;
-  padding: 0;
+  padding: 2em 0 4em 0;
 }
 .article-content {
   border-radius: 30px 0px 0px 30px;

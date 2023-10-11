@@ -2,7 +2,7 @@
   <div>
     <navbar/>
     <router-view/>
-    <footer-customized/>
+    <footer-customized style="position: relative;"/>
   </div>
 </template>
 <script setup>

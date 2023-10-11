@@ -51,8 +51,9 @@
     </div>
   </div>
 </template>
-<script >
+<script>
 import { ref } from "vue";
+
 export default {
   props: {
     docente: {
@@ -60,17 +61,19 @@ export default {
       required: true,
     },
   },
-  setup() {
+
+  setup(props) {
     const docenteDescriptionOpen = ref([]);
-    function docenteDescriptionOpenHandler(index) {
-      if (this.docenteDescriptionOpen.includes(index)) {
-        this.docenteDescriptionOpen = this.docenteDescriptionOpen.filter(
+    const docenteDescriptionOpenHandler = (index) => {
+      if (docenteDescriptionOpen.value.includes(index)) {
+        docenteDescriptionOpen.value = docenteDescriptionOpen.value.filter(
           (item) => item !== index
         );
-        return;
+      } else {
+        docenteDescriptionOpen.value.push(index);
       }
-      this.docenteDescriptionOpen.push(index);
-    }
+    };
+
     return {
       docenteDescriptionOpenHandler,
       docenteDescriptionOpen,
@@ -78,6 +81,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .item {
   display: flex;
@@ -91,10 +95,14 @@ export default {
   background: var(--EVI-DARK-004, #515166);
   margin: 1em 0;
 }
-.item-left {
-  /** if is changing from item-right to item-left  return to initial position*/
-  animation: move-left 0.5s ease-in-out forwards;
-  transition: all 1s ease-in-out;
+
+@keyframes move-bottom {
+  from {
+    transform: translateY(10em);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 @keyframes move-left {
   /**from 100 to 0*/
@@ -105,16 +113,38 @@ export default {
     transform: translateX(0px);
   }
 }
-.item-right {
-  /** move the item to right  with animation and transition*/
-  animation: move-right 0.5s ease-in-out forwards;
-  transition: all 0.3s ease-in-out;
-}
+
 @keyframes move-right {
   to {
     transform: translateX(10em);
   }
 }
+@keyframes move-top {
+  to {
+    transform: translateY(10em);
+  }
+}
+.item-left {
+  /** if is changing from item-right to item-left  return to initial position*/
+  animation: move-bottom 0.5s ease-in-out forwards;
+  transition: all 1s ease-in-out;
+}
+.item-right {
+    animation: move-bottom 0.5s ease-in-out forwards;
+    transition: all 0.3s ease-in-out;
+  }
+@media (min-width: 768px) {
+  .item-left {
+    animation: move-left 0.5s ease-in-out forwards;
+    transition: all 0.3s ease-in-out;
+  }.item-right {
+    animation: move-right 0.5s ease-in-out forwards;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+
+
 .item .item-img-container {
   position: relative;
 }

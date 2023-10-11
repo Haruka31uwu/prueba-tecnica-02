@@ -14,25 +14,28 @@
   </section>
 </template>
 <script>
-import { getDocentes } from '@/services/docentes.service.js'
-import{ref} from 'vue'
+import { onBeforeMount, ref } from 'vue';
+import { getDocentes } from '@/services/docentes.service.js';
+
 export default {
-  setup(){
-    let docentes = ref([])
-    onBeforeMount(async()=>{
-      try{
+  setup() {
+    const docentes = ref([]);
+    onBeforeMount(async () => {
+      try {
         const response = await getDocentes();
         docentes.value = response.data;
-      }catch(error){
-        console.log(error)
+      } catch (error) {
+        console.error(error);
       }
-    })
-    return{
+    });
+
+    return {
       docentes
-    }
+    };
   }
 }
 </script>
+
 <style scoped>
 section {
   background: var(--EVI-DARK-005, #1c1c24);

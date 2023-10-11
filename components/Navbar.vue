@@ -1,11 +1,9 @@
 <template>
-  <nav class="navbar navbar-expand-lg custom-navbar sticky-top px-4">
-    <div class="navbar-items">
-      <a class="navbar-brand" href="#"><img src="/assets/images/logo.svg" /></a>
-      <ul>
-        <li class="nav-item" @click="changeThemeHandler">
-          <a class="nav-link nav-link-custom">
-            <svg
+
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+  <div class="container-fluid">
+    <a class="d-flex gap-2 align-items-center" href="#"><img src="/assets/images/logo.svg" />
+      <svg 
              :fill="theme==='dark'?'#515166':'#000000'"
               version="1.1"
               id="theme-icon"
@@ -15,6 +13,7 @@
               height="30px"
               viewBox="0 0 45.74 45.74"
               xml:space="preserve"
+              @click="changeThemeHandler()"
             >
               <g>
                 <g>
@@ -52,8 +51,24 @@
                   </g>
                 </g>
               </g>
-            </svg>
-          </a>
+            </svg></a>
+
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <svg  xmlns="http://www.w3.org/2000/svg" width="39" height="28" viewBox="0 0 39 28" fill="none">
+  <path d="M2 2H37" stroke="#F0F0F0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M2 14H37" stroke="#F0F0F0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M2 26H37" stroke="#F0F0F0" stroke-width="4" stroke-linecap="round"/>
+</svg>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-items w-md-100 mx-md-auto justify-content-center justify-content-lg-between">
+      <a class="navbar-brand d-none d-lg-flex" href="#"></a>
+      <ul class="d-flex flex-column flex-lg-row ">
+        <li class="nav-item" @click="changeThemeHandler">
+         
         </li>
         <li class="nav-item">
           <a class="nav-link nav-link-custom" href="#">Inicio</a>
@@ -78,11 +93,13 @@
               />
             </svg>
           </a>
+          
           <ul
             v-show="programsOpen"
             class="programs-list"
             v-if="getProgramSel != null"
           >
+          
             <li
               :style="
                 getProgramSel.id == program.id
@@ -93,7 +110,8 @@
               :key="`program-${index}`"
               @click="setProgramSelectedHandler(program)"
 
-            ><hr v-if="program.id!=1"/>
+            >
+            <hr v-if="program.id!=1"/>
               {{ program.nombre }}
             </li>
           </ul>
@@ -103,7 +121,9 @@
         </li>
       </ul>
     </div>
-  </nav>
+    </div>
+  </div>
+</nav>
 </template>
 <script>
 import {
@@ -154,11 +174,19 @@ export default {
   border-radius: 0px 0px 30px 30px;
   background-color: var(--EVI-DARK-001, #13131a);
   box-shadow: 0px 4px 80px 0px rgba(191, 191, 191, 0.1);
+  display: flex;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}@media (max-width: 970px) {
+  .custom-navbar {
+    border-radius: 0px 0px 0px 0px;
+  }
 }
 .navbar-items {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
 }.nav-link-custom:hover{
@@ -197,10 +225,13 @@ ul li a {
   width: 100%;
 }
 .programs-list li:hover {
-  color: var(--EVI500, #0193c1);
+  color: var(--EVI500, #0193c1)!important;
   cursor: pointer;
 }#theme-icon:hover{
   transform:scale(1.2);
   fill:var(--EVI500, #0193c1);
+}path{
+stroke: var(--EVI400, #ffffff);
+
 }
 </style>

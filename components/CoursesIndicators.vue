@@ -4,7 +4,28 @@
       >Estamos impulsados por la firme creencia de que cada uno de nosotros
       puede marcar la diferencia y contribuir a un mundo mas sostenible</span
     >
-    <div class="indicators">
+    <!-- <div class="indicators row">
+      <div
+        class="indicators-item col col-lg-4 col-md-6"
+        v-for="(item, index) in indicators"
+        :id="`indicators-item-${index}`"
+        :key="`indicators-item-${index}`"
+      >
+      <div class="indicators-item-container">
+        <span
+          class="indicators-item-counter"
+          :id="`indicator-counter-${index}`"
+          >{{ item.counter }}</span
+        >
+        <span class="indicators-item-text" :id="`indicator-text-${index}`">{{
+          item.text
+        }}</span>
+      </div>
+      <div class="indicators-divider" v-if="index!=indicators.length-1"></div>
+      </div>
+
+    </div> -->
+    <div class="indicators d-none d-md-flex">
       <div
         class="indicators-item"
         v-for="(item, index) in indicators"
@@ -23,7 +44,28 @@
       </div>
       <div class="indicators-divider" v-if="index!=indicators.length-1"></div>
       </div>
-
+    </div>
+    <div class="d-flex d-md-none row">
+      <div
+        class="col "
+        v-for="(item, index) in indicators"
+        :id="`indicators-item-${index}`"
+        :key="`indicators-item-${index}`"
+        :class="index==indicators.length-1?'col-12 d-flex justify-content-center':'col-sm-6'"
+      >
+      <div class="indicators-item-container indicators-item-mobile"        
+       :style="index!=indicators.length-1?'padding:1.5em 0':'width:200px;margin-top:2em;padding:0.5em 0'"
+>
+        <span
+          class="indicators-item-counter"
+          :id="`indicator-counter-${index}`"
+          >{{ item.counter }}</span
+        >
+        <span class="indicators-item-text" :id="`indicator-text-${index}`">{{
+          item.text
+        }}</span>
+      </div>
+      </div>
     </div>
   </section>
 </template>
@@ -98,6 +140,8 @@ section {
   font-style: normal;
   font-weight: 300;
   line-height: 20px; /* 125% */
+  word-break: break-all;
+
 }
 .indicators-item-counter {
   color: var(--EVI500, #0193c1);
@@ -107,6 +151,11 @@ section {
   font-style: normal;
   font-weight: 700;
   line-height: 20px; /* 62.5% */
+}.indicators-item-mobile{
+  border-radius: 10px;
+background: var(--EVI-DARK-005, #1C1C24);
+box-shadow: 0px 8px 80px 0px rgba(0, 0, 0, 0.50);
+
 }
 .section-text {
   color: var(--EVI400, #f0f0f0);
@@ -117,5 +166,7 @@ section {
   font-weight: 400;
   line-height: 35px; /* 175% */
   width: 80%;
+  word-break: break-all;
+
 }
 </style>
