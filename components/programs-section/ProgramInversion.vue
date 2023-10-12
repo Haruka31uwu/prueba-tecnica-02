@@ -32,8 +32,8 @@
 </template>
 
 <script setup>
-import {addToCart,getCartItems}  from "/composables/programs/cart.composable.js"
-const getCartI= getCartItems
+import {addToCart,getCartIt}  from "/composables/programs/cart.composable.js"
+const getCartI= getCartIt
 const props = defineProps({
   //if null set object {}
   program: {

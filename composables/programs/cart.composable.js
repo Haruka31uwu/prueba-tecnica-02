@@ -5,15 +5,15 @@ export const addToCart = (item) => {
     const store = cartStore()
     store.addToCart(item)
 }
-export const getCartTotal = computed(() => {
+export const getCartTo = computed(() => {
     const store = cartStore()
     return store.getCartTotal
 })
-export const getCartItemsCount=computed(()=>{
+export const getCartItemsCo=computed(()=>{
     const store=cartStore()
     return store.getCartItemsCount
 })
-export const getCartItems=computed(()=>{
+export const getCartIt=computed(()=>{
     const store=cartStore()
     return store.getCartItems
 });

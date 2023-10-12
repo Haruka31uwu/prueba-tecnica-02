@@ -1,13 +1,11 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
     <div class="container-fluid">
-      <NuxtLink class="d-flex gap-2 align-items-center" to="/">
+      <NuxtLink to="/">
         <img src="/assets/images/logo.svg" />
-
       </NuxtLink>
       <a class="d-flex gap-2 align-items-center" href="#">
         <svg
-
           :fill="theme === 'dark' ? '#515166' : '#000000'"
           version="1.1"
           id="theme-icon"
@@ -17,7 +15,6 @@
           height="30px"
           viewBox="0 0 45.74 45.74"
           xml:space="preserve"
-          @click="changeThemeHandler()"
         >
           <g>
             <g>
@@ -57,16 +54,15 @@
           </g>
         </svg>
       </a>
-      <NuxtLink class="d-flex gap-2 align-items-center" to="/car">
+    <NuxtLink to="/car"
+        style="
+          position: relative;
+          display: flex;
+          align-items: center;
+          column-gap: 0.5em;
+        "
+      >
 
-        <div
-          style="
-            position: relative;
-            display: flex;
-            align-items: center;
-            column-gap: 0.5em;
-          "
-        >
           <svg
             :fill="theme === 'dark' ? '#515166' : '#000000'"
             class="car"
@@ -97,13 +93,11 @@
               </g>
             </g>
           </svg>
-
-          <span class="cart-count" v-if="getCartItemsCo > 0">{{ getCartItemsCo }}</span>
-          <div class="cart-items" v-if="getCartItemsCo > 0">
+          
+        </NuxtLink>
+          <div class="cart-items" v-if="getCartTonotZero">
             <span class="cart-total">S/. {{ getCartTo }}</span>
           </div>
-        </div>
-      </NuxtLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -207,9 +201,9 @@ import {
   getProgramSelected,
 } from "/composables/programs/programs.composable.js";
 import {
-  getCartTotal,
-  getCartItemsCount,
-  getCartItems,
+  getCartTo,
+  getCartItemsCo,
+  getCartIt,
 } from "/composables/programs/cart.composable.js";
 
 import { scrollToSection, changeTheme, getTheme } from "/composables/index.js";
@@ -225,10 +219,12 @@ export default {
     const getProgramSel = computed(() => {
       return getProgramSelected();
     });
-    const getCartTo = getCartTotal;
-    const getCartItemsCo = getCartItemsCount;
-    const getCartI = getCartItems;
-
+    const getCartT = getCartTo;
+    const getCartItemsC = getCartItemsCo;
+    const getCartI = getCartIt.value;
+    const getCartTonotZero = computed(() => {
+      return getCartTo.value > 0;
+    });
     function scrollToSectionHandler(section) {
       scrollToSection(section);
     }
@@ -251,10 +247,12 @@ export default {
       setProgramSelectedHandler,
       changeThemeHandler,
       theme,
-      getCartTo,
-      getCartItemsCo,
+      getCartT,
+      getCartItemsC,
       cartOpen,
       getCartI,
+      getCartTo,
+      getCartTonotZero
     };
   },
 };
@@ -265,10 +263,10 @@ export default {
   background-color: var(--EVI-DARK-001, #13131a);
   box-shadow: 0px 4px 80px 0px rgba(191, 191, 191, 0.1);
   display: flex;
-  z-index: 1;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 3;
 }
 @media (max-width: 970px) {
   .custom-navbar {
@@ -354,7 +352,6 @@ path {
   border: none;
 }
 .cart-count {
-
   border-radius: 50%;
   background: var(--EVI500, #0193c1);
   width: 20px;

@@ -143,7 +143,7 @@
 footer {
   background: var(--EVI-DARK-005, #1c1c24);
   box-shadow: 0px -4px 40px 0px rgba(0, 0, 0, 0.1);
-
+  position: relative;
 }
 ul {
   list-style: none;

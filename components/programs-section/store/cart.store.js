@@ -24,6 +24,7 @@ getters:{
             const cartTotal=localStorage.getItem('cartTotal');
             if(cartTotal){
                 this.cartTotal=JSON.parse(cartTotal);
+                return this.cartTotal
             }
             return this.cartTotal  
         }
@@ -32,8 +33,8 @@ getters:{
         if(process.client){
             const cartItems=localStorage.getItem('cartItems');
             if(cartItems){
-
                 this.cartItems=JSON.parse(cartItems);
+                return this.cartItems.length;
             }
             return this.cartItems.length;
         }   

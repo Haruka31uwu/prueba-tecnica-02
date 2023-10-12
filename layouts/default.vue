@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navbar style="z-index: 3;"/>
+    <navbar/>
     <router-view/>
     <footer-customized />
   </div>

@@ -24,16 +24,15 @@
 </template>
 <script>
 import {
-  getCartTotal,
-  getCartItemsCount,
-  getCartItems
+  getCartTo,
+  getCartItemsCo,
+  getCartIt
 } from "/composables/programs/cart.composable.js";
-import { computed } from "vue";
 export default {
   setup() {
-    const cartTotal = computed(() => getCartTotal.value);
-    const cartItemsCount = computed(() => getCartItemsCount.value);
-    const cartItems = computed(() => getCartItems.value);
+    const cartTotal =  getCartTo.value;
+    const cartItemsCount = getCartItemsCo.value;
+    const cartItems =  getCartIt.value;
     return {
       cartTotal,
       cartItemsCount,
