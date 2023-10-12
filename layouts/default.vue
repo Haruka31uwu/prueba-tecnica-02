@@ -1,8 +1,8 @@
 <template>
   <div>
-    <navbar/>
+    <navbar style="z-index: 3;"/>
     <router-view/>
-    <footer-customized style="position: relative;"/>
+    <footer-customized />
   </div>
 </template>
 <script setup>
@@ -35,6 +35,7 @@ useHead({
   --EVI-DARK-005: #1c1c24;
   --EVI400: #f0f0f0;
   --EVI500:#0193C1;
+  --EVI-LIGHT-001: #D5D3D3;
 }
 @font-face {
   font-family: "Axiforma";

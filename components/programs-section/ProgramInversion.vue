@@ -7,8 +7,11 @@
           <span>${{ program.precio_usd }}</span>
           <span>(Perú: S/{{ program.precio_pen }})</span>
           <p>!Pregunta por nuestros descuentos!</p>
-          <button class="btn-cuz btn-cuz-white">
-            <img src="/assets/images/car.svg" /><span>Agregar al carrito</span>
+          <button class="btn-cuz btn-cuz-white" :disabled="getItemInCart(program)" @click="addToCartStoreStorage(program)" :style="getItemInCart(program)?'background-color:var(--EVI-DARK-004,#515166)!important':''">
+            <img src="/assets/images/car.svg" v-if="!getItemInCart(program)"/>
+
+            <span v-if="!getItemInCart(program)">Agregar al carrito</span>
+            <span v-else>Programa en el carrito</span>
           </button>
         </div>
         <hr width="100%" />
@@ -29,6 +32,8 @@
 </template>
 
 <script setup>
+import {addToCart,getCartItems}  from "/composables/programs/cart.composable.js"
+const getCartI= getCartItems
 const props = defineProps({
   //if null set object {}
   program: {
@@ -37,6 +42,14 @@ const props = defineProps({
   },
 
 });
+function addToCartStoreStorage(program) {
+  console.log(program);
+
+  addToCart(program)
+}
+function getItemInCart(program){
+    return getCartI.value.filter(item => item.id == program.id).length>0
+}
 </script>
 
 <style scoped>
@@ -80,6 +93,21 @@ p {
   gap: 15px;
   flex-shrink: 0;
   border: none;
+}.btn-cuz-white:hover{
+    background: var(--EVI-LIGHT-001, #D5D3D3);
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 .btn-cuz-sky-blue-outlined {
   border-radius: 30px;

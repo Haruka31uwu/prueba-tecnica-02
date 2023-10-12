@@ -48,12 +48,21 @@ h1 {
 }
 button {
   border-radius: 30px;
-  background: #0193c1;
+  background: var(--EVI500,#0193C1);
   box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
   width: 40%;
   border: none;
   height: 45px;
-}h1,button{
+}button:hover{
+    background: var(--bs-blue, #0d6efd);
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    border: none;
+    height: 45px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+h1,button{
     color: var(--EVI400, #f0f0f0);
 }img{
     height: 70%;

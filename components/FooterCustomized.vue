@@ -47,7 +47,7 @@
 
     <div class="w-75 divider d-flex d-md-none"></div>
     <div
-      class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-center col-sm-12 col-md-7 col-lg-5 gap-lg- gap-md-1 gap-sm-4"
+      class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-between   col-sm-12 col-md-7 col-lg-5 gap-lg- gap-md-1 gap-sm-4"
     >
       <div class="footer-contacto d-none d-md-flex flex-md-column">
         <h5 class="d-none d-md-flex">Contacto:</h5>
@@ -109,7 +109,7 @@
             <img src="/assets/images/tiktok.svg" />
           </li>
           <li>
-            <img src="/assets/images/whats.svg" />
+            <img src="/assets/images/whatsapp.svg" />
           </li>
         </ul>
       </div>
@@ -143,6 +143,7 @@
 footer {
   background: var(--EVI-DARK-005, #1c1c24);
   box-shadow: 0px -4px 40px 0px rgba(0, 0, 0, 0.1);
+
 }
 ul {
   list-style: none;
