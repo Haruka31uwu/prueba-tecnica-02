@@ -1,1 +1,0 @@
-import{_ as e,q as o,m as t,s as c}from"./entry.94e54efa.js";const n={},s=c("h1",null,"Car Component",-1),r=[s];function a(_,l){return t(),o("div",null,r)}const f=e(n,[["render",a]]);export{f as default};
