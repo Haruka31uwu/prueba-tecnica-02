@@ -43,7 +43,6 @@ const props = defineProps({
 
 });
 function addToCartStoreStorage(program) {
-  console.log(program);
 
   addToCart(program)
 }

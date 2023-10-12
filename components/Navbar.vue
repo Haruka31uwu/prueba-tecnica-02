@@ -15,6 +15,7 @@
           height="30px"
           viewBox="0 0 45.74 45.74"
           xml:space="preserve"
+          @click="changeThemeHandler()"
         >
           <g>
             <g>
